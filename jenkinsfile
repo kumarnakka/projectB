@@ -31,7 +31,7 @@ stage('Four') {
               stage('integration test') {
                                   agent {
                                         docker {
-                                               reusenode false
+                                               reuseNode false
                                                image 'ubuntu'
                                        }
                                       }
