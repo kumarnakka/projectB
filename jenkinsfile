@@ -17,6 +17,10 @@ pipeline {
                                    branch "master"
                             }
                    }
+                   steps {
+                           echo "hello"
+                   }
+                   }
 stage('four') {
              parallel {
                    stage('unit test') {
@@ -35,5 +39,7 @@ stage('four') {
                                             echo 'running the integration test...'
                              }
                         }
+             }
 }
 }
+
