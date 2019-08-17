@@ -1,18 +1,18 @@
 pipeline {
         agent any
                 stages {
-                        stage('one') {
+                        stage('One') {
                                 steps {
                                         echo 'hi, this is kumar'
                                 }
                  }
-                stage('two') {
+                stage('Two') {
                        steps  {
                                 input('do you want to proceed?')
                         }
              }
-             stage('three') 
-                      when {
+             stage('Three') {
+                     when {
                              not {
                                    branch "master"
                             }
@@ -21,7 +21,7 @@ pipeline {
                            echo "hello"
                    }
                    }
-stage('four') {
+stage('Four') {
              parallel {
                    stage('unit test') {
                                       steps {
