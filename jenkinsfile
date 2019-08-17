@@ -11,6 +11,12 @@ pipeline {
                                    input('Do tou want to proceed?')
                                    }
                                    }
+                    stage('scm') {
+                            steps {
+                                  //some block
+                                  git 'https://github.com/kumarnakka/maven-samples.git'
+                                   }
+                                   }
                    stage('packaging') {
                           steps {
                           sh label: '', script: 'mvn package'
