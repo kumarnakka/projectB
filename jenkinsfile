@@ -14,7 +14,7 @@ pipeline {
                     stage('scm') {
                             steps {
                                   //some block
-                                  git 'https://github.com/kumarnakka/maven-samples.git'
+                                  git 'https://github.com/kumarnakka/hello-world.git
                                    }
                                    }
                    stage('packaging') {
