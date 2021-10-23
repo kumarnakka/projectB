@@ -3,12 +3,12 @@ pipeline {
             stages {
                     stage('One') {
                            steps {
-                                   echo 'hi, thi is kumar'
+                                   echo 'hi, this is kumar'
                                    }
                                    }
                    stage('two') {
                             steps {
-                                   input('Do tou want to proceed?')
+                                   input('Do you want to proceed?')
                                    }
                                    }
                     stage('scm') {
