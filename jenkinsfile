@@ -1,25 +1,24 @@
 pipeline {
       agent any
             stages {
-                    stage('One') {
+                    stage('folder') {
                            steps {
-                                   echo 'hi, this is kumar'
+                           sh 'mkdir pipelinetest'
                                    }
                                    }
-                   stage('two') {
+                   stage('checkpoint') {
                             steps {
                                    input('Do you want to proceed?')
                                    }
                                    }
-                    stage('scm') {
+                    stage('build') {
                             steps {
-                                  //some block
-                                  git 'https://github.com/kumarnakka/hello-world.git'
+                            sh 'mvn clean install package'
                                    }
                                    }
-                   stage('packaging') {
+                   stage('copying') {
                           steps {
-                          sh label: '', script: 'mvn package'
+                          sh 'cp -R /var/lib/jenkins/workspace/test1/webapp/target/* pipelinetest'
                           }
                           }
 }
