@@ -3,7 +3,7 @@ pipeline {
             stages {
                     stage('folder') {
                            steps {
-                           sh 'mkdir pipelinetest'
+                           sh 'mkdir pipelinetest1'
                                    }
                                    }
                    stage('checkpoint') {
@@ -19,7 +19,7 @@ pipeline {
                                    }
                    stage('copying') {
                           steps {
-                          sh 'cp -R /var/lib/jenkins/workspace/test1/webapp/target/* pipelinetest'
+                          sh 'cp -R /var/lib/jenkins/workspace/test1/webapp/target/* pipelinetest1'
                           }
                           }
 }
